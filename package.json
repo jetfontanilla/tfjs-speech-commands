@@ -6,6 +6,7 @@
   "license": "MIT",
   "scripts": {
     "build": "preact build",
+    "build:github": "BASE_URL=/tfjs-offline-speech-commands preact build",
     "serve": "sirv build --port 8080 --cors --single",
     "dev": "preact watch",
     "lint": "eslint src",
@@ -16,6 +17,15 @@
     "ignorePatterns": [
       "build/"
     ]
+  },
+  "browser": {
+    "crypto": false,
+    "fs": false,
+    "path": false,
+    "os": false,
+    "net": false,
+    "stream": false,
+    "tls": false
   },
   "devDependencies": {
     "enzyme": "^3.10.0",
