@@ -1,7 +1,8 @@
 {
   "private": true,
   "name": "tfjs-offline-speech-commands",
-  "version": "0.0.0",
+  "author": "Jet Fontanilla <pauljetfontanilla@gmail.com> (https://github.com/jetfontanilla)",
+  "version": "1.0.0",
   "license": "MIT",
   "scripts": {
     "build": "preact build",
@@ -27,6 +28,8 @@
     "sirv-cli": "1.0.3"
   },
   "dependencies": {
+    "@tensorflow-models/speech-commands": "^0.5.4",
+    "@tensorflow/tfjs": "^3.13.0",
     "preact": "^10.3.2",
     "preact-render-to-string": "^5.1.4",
     "preact-router": "^3.2.1"
