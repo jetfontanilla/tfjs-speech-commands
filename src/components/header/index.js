@@ -1,15 +1,14 @@
 import { h } from 'preact';
 import { Link } from 'preact-router/match';
 import style from './style.css';
+import githubLight from "./github-light.png";
 
 const Header = () => (
 	<header class={style.header}>
-		<h1>Preact App</h1>
-		<nav>
-			<Link activeClassName={style.active} href="/">Home</Link>
-			<Link activeClassName={style.active} href="/profile">Me</Link>
-			<Link activeClassName={style.active} href="/profile/john">John</Link>
-		</nav>
+		<h1>TFJS Speech Command Demo</h1>
+		<a class="github" href="https://github.com/jetfontanilla/tfjs-offline-speech-commands">
+			<img src={githubLight} width="32" height="32" alt="View on Github"/>
+		</a>
 	</header>
 );
 
