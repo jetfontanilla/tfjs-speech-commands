@@ -1,4 +1,3 @@
-import { h } from 'preact';
 import style from './style.css';
 import { useEffect, useState } from "preact/hooks";
 import Grid from "../../components/grid";
@@ -11,6 +10,7 @@ const Home = () => {
 	const [isRecording, setRecording] = useState(false);
 	const [isLoading, setLoading] = useState(true);
 	const [position, setPosition] = useState([2, 2]);
+	const [wordLabels, setWordlabels] = useState([]);
 
 	// When calling `create()`, you must provide the type of the audio input.
 	// The two available options are `BROWSER_FFT` and `SOFT_FFT`.
@@ -19,14 +19,13 @@ const Home = () => {
 	//   (not implemented yet).
 	const recognizer = speechCommands.create('BROWSER_FFT');
 
-	let wordLabels = [];
 	const loadRecognizer = async() => {
 		// Make sure that the underlying model and metadata are loaded via HTTPS
 		// requests.
 		await recognizer.ensureModelLoaded();
 
 		// See the array of words that the recognizer is trained to recognize.
-		wordLabels = recognizer.wordLabels();
+		setWordlabels(recognizer.wordLabels());
 	}
 
 	const startRecording = () => {
@@ -43,6 +42,8 @@ const Home = () => {
 			// - result.spectrogram contains the spectrogram of the recognized word.
 			const max = Math.max(...result.scores);
 			const wordIndex = result.scores.indexOf(max);
+
+			console.log("Recognized Word:", wordLabels[wordIndex]);
 
 			let [x, y] = position;
 			switch(wordLabels[wordIndex]) {
@@ -68,6 +69,7 @@ const Home = () => {
 					break;
 			}
 			setPosition([x, y]);
+			console.log("Current position:", [x, y]);
 		}, {
 			includeSpectrogram: false,
 			probabilityThreshold: 0.75
@@ -84,10 +86,13 @@ const Home = () => {
 		setLoading(false);
 	}, []);
 
+
 	return (
 		<div class={style.home}>
 			{isLoading && <span>Loading...</span>}
-			<Grid size={GRID_SIZE}></Grid>
+			{!isLoading && <Grid size={GRID_SIZE}></Grid>}
+			{!isLoading && !isRecording && <span class={style.home} onClick={() => startRecording()}>Start Recording</span>}
+			{!isLoading && isRecording && <span class={style.home} onClick={() => stopRecording()}>Stop Recording</span>}
 		</div>
 	);
 }
