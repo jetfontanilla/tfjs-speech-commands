@@ -1,8 +1,12 @@
 # Tensorflow JS Speech Commands
 a simple app using the [Tensorflow JS Speech Commands](https://github.com/tensorflow/tfjs-models/tree/master/speech-commands)
 
+this uses Google's TensorFlow speech command models to do local speech recognition
+
 view the app in action here:
 * https://tfjs-speech-commands.vercel.app/
+
+
 
 ## CLI Commands
 
