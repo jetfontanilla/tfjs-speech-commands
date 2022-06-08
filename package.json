@@ -40,6 +40,7 @@
   "dependencies": {
     "@tensorflow-models/speech-commands": "^0.5.4",
     "@tensorflow/tfjs": "^3.13.0",
+    "classnames": "^2.3.1",
     "preact": "^10.3.2",
     "preact-render-to-string": "^5.1.4",
     "preact-router": "^3.2.1"
