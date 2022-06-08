@@ -1,5 +1,5 @@
-# Tensorflow JS Offline Speech Commands
-Tensorflow JS Offline Speech Commands example
+# Tensorflow JS Speech Commands
+a simple app using the [Tensorflow JS Speech Commands](https://github.com/tensorflow/tfjs-models/tree/master/speech-commands)
 
 ## CLI Commands
 
