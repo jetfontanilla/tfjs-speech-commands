@@ -3,7 +3,6 @@ export default (config, env, helpers) => {
         fs: 'empty',
     }
     config.output.publicPath = '/' + process.env.BASE_URL;
-    console.log(process.env.BASE_URL, config.output.publicPath);
     config.plugins.push(
         new helpers.webpack.DefinePlugin({
             PUBLIC_PATH: JSON.stringify(config.output.publicPath),
