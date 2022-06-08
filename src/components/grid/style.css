@@ -1,7 +1,17 @@
 .grid {
-	display: inline-block;
-	width: 2em;
-	height: 2em;
+	display: inline-flex;
+	width: 9em;
+	height: 9em;
 	border: 1px #333 solid;
 	margin: 0.2em;
+	align-items: flex-start;
+	justify-content: flex-end;
+	font-size: 0.7em;
+	padding: 0.5em;
 }
+
+.active {
+	background-color: #32CD32;
+	color: #fff;
+}
+

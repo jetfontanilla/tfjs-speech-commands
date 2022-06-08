@@ -1,5 +1,25 @@
 .home {
-	padding: 56px 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
 	min-height: 100%;
 	width: 100%;
+}
+
+.recording {
+	margin-top: 1.5em;
+	cursor: pointer;
+	width: 10em;
+	border: 1px #666 solid;
+	border-radius: 0.4em;
+	text-align: center;
+	padding: 0.5em;
+	background-color: #239023;
+	color: #fff;
+	font-weight: bold;
+}
+
+.stop {
+	background-color: #4b566e;
 }
