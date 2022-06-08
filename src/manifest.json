@@ -1,6 +1,6 @@
 {
-  "name": "tfjs-offline-speech-commands",
-  "short_name": "tfjs-offline-speech-commands",
+  "name": "TensorFlow Speech Commands Example",
+  "short_name": "TensorFlow Speech Commands Example",
   "start_url": "/",
   "display": "standalone",
   "orientation": "portrait",
