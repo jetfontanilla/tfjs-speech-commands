@@ -2,7 +2,7 @@
 a simple app using the [Tensorflow JS Speech Commands](https://github.com/tensorflow/tfjs-models/tree/master/speech-commands)
 
 view the app in action here:
-* https://tfjs-speech-commands-e8ni66zhm-jetfontanilla.vercel.app/
+* https://tfjs-speech-commands.vercel.app/
 
 ## CLI Commands
 
