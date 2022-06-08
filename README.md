@@ -1,6 +1,9 @@
 # Tensorflow JS Speech Commands
 a simple app using the [Tensorflow JS Speech Commands](https://github.com/tensorflow/tfjs-models/tree/master/speech-commands)
 
+view the app in action here:
+* https://jetfontanilla.github.io/tfjs-speech-commands/
+
 ## CLI Commands
 
 ``` bash
