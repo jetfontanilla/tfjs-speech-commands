@@ -105,7 +105,7 @@ const Home = () => {
     return (
         <div class={style.home}>
             {isLoading && <span>Loading...</span>}
-            {!isLoading && <p style={{marginBottom: "3em"}}>Click on "Start Recording" and being speaking commands. Recognized commands = <em>UP</em>, <em>DOWN</em>, <em>LEFT</em>, <em>RIGHT</em> </p>}
+            {!isLoading && <p style={{marginBottom: "3em"}}>Click on "Start Recording" and begin speaking the commands. Recognized commands = <em>UP</em>, <em>DOWN</em>, <em>LEFT</em>, <em>RIGHT</em> </p>}
             {!isLoading && <Grid size={GRID_SIZE} position={position}></Grid>}
             {!isLoading && !isRecording &&
             <span class={style.recording} onClick={() => startRecording()}>Start Recording</span>}
