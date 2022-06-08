@@ -6,7 +6,7 @@
   "license": "MIT",
   "scripts": {
     "build": "preact build",
-    "build:github": "BASE_URL=/tfjs-speech-commands preact build",
+    "build:github": "BASE_URL=/tfjs-speech-commands preact build --no-prerender --dest docs",
     "serve": "sirv build --port 8080 --cors --single",
     "dev": "preact watch",
     "lint": "eslint src",
@@ -15,7 +15,8 @@
   "eslintConfig": {
     "extends": "preact",
     "ignorePatterns": [
-      "build/"
+      "build/",
+      "docs/"
     ]
   },
   "browser": {
