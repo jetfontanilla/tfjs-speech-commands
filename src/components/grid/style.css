@@ -1,7 +1,7 @@
 .grid {
 	display: inline-flex;
-	width: 9em;
-	height: 9em;
+	width: 7.5em;
+	height: 7.5em;
 	border: 1px #333 solid;
 	margin: 0.2em;
 	align-items: flex-start;
